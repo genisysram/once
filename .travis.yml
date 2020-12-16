@@ -1,5 +1,4 @@
 language: node_js
-language: node_js
 node_js:
   - '0.8'
   - '0.10'
@@ -7,3 +6,9 @@ node_js:
   - 'iojs'
 before_install:
   - npm install -g npm@latest
+# adding code to run on powersysterms  
+jobs: 
+  exclude:
+    - arch: ppc64le
+      node_js: 'iojs'
+  
